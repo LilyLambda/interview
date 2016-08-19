@@ -19,6 +19,8 @@ public class Main {
         printQuestion3();
         System.out.println();
         printQuestion4();
+        System.out.println();
+        printQuestion5();
     }
 
     private static void printQuestion1() {
@@ -49,12 +51,25 @@ public class Main {
         printQuestion3Example("](){");
     }
 
+    private void printQuestion3Example(String ex) {
+        System.out.println(String.format("%s balanced? %s", ex, new BracketBalanceVerifier(ex).isBalanced()));
+    }
+
     private void printQuestion4() {
         System.out.println("Question 4:");
         System.out.println("[Answer is in README.md in root.]");
     }
 
-    private void printQuestion3Example(String ex) {
-        System.out.println(String.format("%s balanced? %s", ex, new BracketBalanceVerifier(ex).isBalanced()));
+    private void printQuestion5() {
+        System.out.println("Question 5:");
+        StringBuilder builder = new StringBuilder();
+        builder.append("// this is a comment\n");
+        builder.append("{ // another comment\n");
+        builder.append("    true, \"foo\", // 3rd comment\n");
+        builder.append("    \"http://www.ariba.com\", // comment after URL\n");
+        builder.append("    \"\\\"//foo\", // escaped quotes are tricky\n");
+        builder.append("    \"\\\\\"// so are literal backslashes\n");
+        builder.append("}\n");
+        System.out.println(new JsonPreprocessor(builder.toString()).removeComments());
     }
 }
