@@ -1,8 +1,7 @@
 # Interview Questions #
 
-I've answered questions in Java mostly because it's the industry lingua franca
-and the language of most interviews. I'm more proficient developing Scala, and
-perfectly at home scripting in Ruby & Python.
+I've answered questions in Java because it's the language of most of my interviews.
+I'm more proficient developing Scala, and perfectly at home scripting in Ruby & Python.
 
 ## Build ##
 
