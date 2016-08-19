@@ -17,6 +17,8 @@ public class Main {
         printQuestion2();
         System.out.println();
         printQuestion3();
+        System.out.println();
+        printQuestion4();
     }
 
     private static void printQuestion1() {
@@ -45,6 +47,11 @@ public class Main {
         printQuestion3Example("[]{}");
         printQuestion3Example("([)]");
         printQuestion3Example("](){");
+    }
+
+    private void printQuestion4() {
+        System.out.println("Question 4:");
+        System.out.println("[Answer is in README.md in root.]");
     }
 
     private void printQuestion3Example(String ex) {
